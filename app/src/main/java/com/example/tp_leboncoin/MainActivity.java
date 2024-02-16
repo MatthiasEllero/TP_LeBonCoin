@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.tp_leboncoin.AdAddActivity;
-import com.example.tp_leboncoin.AdListViewActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

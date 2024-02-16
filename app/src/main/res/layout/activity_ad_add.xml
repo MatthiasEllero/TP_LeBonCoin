@@ -6,48 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".AdAddActivity">
 
-    <ImageView
-        android:id="@+id/imagetest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/TextProductName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.6"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-    <EditText
-        android:id="@+id/TextProductName"
-        android:layout_width="394dp"
-        android:layout_height="72dp"
-        android:hint="Insérer le nom de votre Produit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imagetest" />
-
-    <EditText
-        android:id="@+id/TextAddress"
-        android:layout_width="409dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="40dp"
-        android:hint="Insérer Votre Adresse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TextProductName" />
-
-    <Button
-        android:id="@+id/bsend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/TextAddress" />
 </androidx.constraintlayout.widget.ConstraintLayout>

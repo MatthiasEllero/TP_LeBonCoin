@@ -55,6 +55,8 @@ public class AdModel {
                 ", address='" + address + '\'' +
                 ", image=" + image +
                 '}';
+
+
     }
 }
 
