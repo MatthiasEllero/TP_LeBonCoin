@@ -46,6 +46,16 @@
                     android:backgroundTint="#2196F3"
                     android:text="Add Material" />
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/btnCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appeler"
+                    android:onClick="callPhoneNumber" />
         </TableLayout>
 
     </LinearLayout>

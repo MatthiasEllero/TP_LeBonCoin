@@ -2,9 +2,11 @@ package com.example.tp_leboncoin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main); // Charger la mise en page
 
         // Trouver les boutons après avoir chargé la mise en page
-        Button b_add = (Button) findViewById(R.id.button_add);
-        Button b_display = (Button) findViewById(R.id.button_display);
+        Button b_add = findViewById(R.id.button_add);
+        Button b_display = findViewById(R.id.button_display);
 
         // Ajouter un écouteur de clic pour le bouton b_add
         b_add.setOnClickListener(new View.OnClickListener() {
@@ -36,5 +38,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Ajouter un écouteur de clic pour le bouton d'appel
+        Button b_call = findViewById(R.id.btnCall);
+        b_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callPhoneNumber();
+            }
+        });
+    }
+
+    // Méthode pour composer le numéro de téléphone
+    private void callPhoneNumber() {
+        // Récupérer le numéro de téléphone à partir d'une source quelconque (par exemple une variable ou une ressource)
+        String phoneNumber = "0769178770";
+
+        // Créer une intention d'appel
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + phoneNumber));
+
+        // Vérifier si l'application d'appel est disponible sur l'appareil
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            // Démarrer l'intention
+            startActivity(intent);
+        } else {
+            // Gérer le cas où aucune application d'appel n'est disponible
+            Toast.makeText(this, "Aucune application d'appel n'est disponible.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
