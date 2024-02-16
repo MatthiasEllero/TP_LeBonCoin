@@ -66,7 +66,7 @@ class AdListManager {
         adList.add(ad);
     }
 
-    public static List<AdModel> getAdListWithDefaultData() {
+    public static List<AdModel> adList() {
         if (adList.isEmpty()) {
             initializeSampleAds(); // Initialise les annonces si la liste est vide
         }

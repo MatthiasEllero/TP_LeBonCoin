@@ -7,11 +7,15 @@
     android:backgroundTint="#33000000">
 
     <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="169dp"
+        android:layout_width="409dp"
+        android:layout_height="206dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="21dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,16 +45,23 @@
                     android:text="TextView"
                     android:textAlignment="center"
                     android:textSize="20sp" />
+
             </LinearLayout>
 
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_weight="1" />
+
         <TextView
             android:id="@+id/adAddress"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="44dp"
             android:text="TextView"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
