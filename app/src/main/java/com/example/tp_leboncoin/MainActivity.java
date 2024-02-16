@@ -2,7 +2,9 @@ package com.example.tp_leboncoin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,5 +18,25 @@ public class MainActivity extends AppCompatActivity {
         Button b_display = (Button) findViewById(R.id.button_display);
 
         setContentView(R.layout.activity_main);
+
+        // Ajouter un écouteur de clic pour le bouton b_add
+        b_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent pour démarrer AdAddActivity
+                Intent intent = new Intent(MainActivity.this, AdAddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Ajouter un écouteur de clic pour le bouton b_display
+        b_display.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent pour démarrer AdListViewActivity
+                Intent intent = new Intent(MainActivity.this, AdListViewActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
