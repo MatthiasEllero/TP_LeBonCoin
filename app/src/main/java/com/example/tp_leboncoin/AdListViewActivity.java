@@ -16,7 +16,7 @@ import java.util.List;
 
 public class AdListViewActivity extends AppCompatActivity {
 
-    List<AdModel> adList = AdListManager.getAdListWithDefaultData();
+    List<AdModel> adList = AdListManager.adList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class AdListViewActivity extends AppCompatActivity {
 }
 class AdAdapter extends BaseAdapter {
 
-    List<AdModel> adList = AdListManager.getAdListWithDefaultData();
+    List<AdModel> adList = AdListManager.adList();
     private final LayoutInflater inflater;
     // Constructor
     public AdAdapter(Context context, List<AdModel> adModelArrayList) {
