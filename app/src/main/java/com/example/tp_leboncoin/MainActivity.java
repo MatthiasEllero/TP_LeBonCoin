@@ -1,23 +1,24 @@
 package com.example.tp_leboncoin;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.tp_leboncoin.AdAddActivity;
+import com.example.tp_leboncoin.AdListViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main); // Charger la mise en page
 
-        //Création des boutons cliquables
+        // Trouver les boutons après avoir chargé la mise en page
         Button b_add = (Button) findViewById(R.id.button_add);
         Button b_display = (Button) findViewById(R.id.button_display);
-
-        setContentView(R.layout.activity_main);
 
         // Ajouter un écouteur de clic pour le bouton b_add
         b_add.setOnClickListener(new View.OnClickListener() {
