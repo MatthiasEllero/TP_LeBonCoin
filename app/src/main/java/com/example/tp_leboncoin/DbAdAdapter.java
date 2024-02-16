@@ -29,7 +29,6 @@ public class DbAdAdapter extends CursorAdapter {
     public void bindView(View view, Context context, Cursor cursor) {
         // TextView idTextView = (TextView) view.findViewById(...)
         TextView titleTextView = (TextView) view.findViewById(R.id.adName);
-        System.out.println(titleTextView);
         TextView addressTextView = (TextView) view.findViewById(R.id.adAddress);
         ImageView imageView = (ImageView) view.findViewById(R.id.adImage);
         String id = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper._ID));
@@ -39,6 +38,11 @@ public class DbAdAdapter extends CursorAdapter {
         // idTextView.setText(id);
         titleTextView.setText(title);
         addressTextView.setText(address);
-        Glide.with(view).load(image).into(imageView);
+
+        // Utilisez Glide.with(context) pour charger l'image depuis l'URL
+        Glide.with(context)
+                .load(image) // Charge l'image depuis l'URL spécifiée
+                .into(imageView); // Affiche l'image dans ImageView
     }
+
 }
