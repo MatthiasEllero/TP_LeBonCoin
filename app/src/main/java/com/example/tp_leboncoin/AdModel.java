@@ -60,14 +60,10 @@ public class AdModel {
 
 // Static list to manage AdModel instances
 class AdListManager {
-    private static List<AdModel> adList = new ArrayList<>();
+    public static ArrayList<AdModel> adList = new ArrayList<>();
 
     public static void addAd(AdModel ad) {
         adList.add(ad);
-    }
-
-    public static List<AdModel> getAds() {
-        return new ArrayList<>(adList); // Retourner une copie pour éviter les modifications externes
     }
 
     public static void initializeSampleAds() {
