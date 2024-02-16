@@ -24,8 +24,6 @@ import com.example.tp_leboncoin.sqlite.DBManager;
 import java.util.List;
 
 public class AdListViewActivity extends AppCompatActivity {
-
-    List<AdModel> adList = AdListManager.adList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
