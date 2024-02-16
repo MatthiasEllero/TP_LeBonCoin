@@ -17,7 +17,7 @@ import java.util.List;
 
 public class AdListViewActivity extends AppCompatActivity {
 
-    ArrayList<AdModel> adList = AdListManager.adList;
+    List<AdModel> adList = AdListManager.getAdListWithDefaultData();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,26 +30,22 @@ public class AdListViewActivity extends AppCompatActivity {
 }
 class AdAdapter extends BaseAdapter {
 
-    ArrayList<AdModel> adList = AdListManager.adList;
-    private final Context context;
-    private final ArrayList<AdModel> adModelArrayList;
+    List<AdModel> adList = AdListManager.getAdListWithDefaultData();
     private final LayoutInflater inflater;
     // Constructor
-    public AdAdapter(Context context, ArrayList<AdModel> adModelArrayList) {
-        this.context = context;
-        this.adModelArrayList = adModelArrayList;
+    public AdAdapter(Context context, List<AdModel> adModelArrayList) {
         inflater = (LayoutInflater.from(context));
     }
     @Override
     public int getCount() { return adList.size() ; } // Return ad number
     @Override
-    public Object getItem(int i) { return adList.get(i); } // Return ad number i
+    public AdModel getItem(int i) { return adList.get(i); } // Return ad number i
     @Override
     public long getItemId(int i) { return adList.get(i).getId(); } // Return ad id i
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 // Get ad number i
-        AdModel ad = adList.get(i) ;
+        AdModel ad = getItem(i) ;
         view = inflater.inflate(R.layout.item_listview_ad, null);
 // Get the image view and both text views
         ImageView imageIV = view.findViewById(R.id.adImage) ;

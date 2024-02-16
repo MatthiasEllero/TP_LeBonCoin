@@ -60,17 +60,23 @@ public class AdModel {
 
 // Static list to manage AdModel instances
 class AdListManager {
-    public static ArrayList<AdModel> adList = new ArrayList<>();
+    private static ArrayList<AdModel> adList = new ArrayList<>();
 
     public static void addAd(AdModel ad) {
         adList.add(ad);
     }
 
-    public static void initializeSampleAds() {
-        adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", R.drawable.wood_dark)); // Assuming 0 as a placeholder for image ID
-        adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice",R.drawable.ciment_b));
-        adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", R.drawable.bric_blanc));
+    public static List<AdModel> getAdListWithDefaultData() {
+        if (adList.isEmpty()) {
+            initializeSampleAds(); // Initialise les annonces si la liste est vide
+        }
+        return new ArrayList<>(adList); // Retourne une copie de la liste avec toutes les données
+    }
 
+    private static void initializeSampleAds() {
+        adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", R.drawable.wood_dark));
+        adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice", R.drawable.ciment_b));
+        adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", R.drawable.bric_blanc));
     }
 }
 
