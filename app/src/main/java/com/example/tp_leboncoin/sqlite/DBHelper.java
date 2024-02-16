@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "Annonces";
 
     // Table columns
-    public static final String _ID = "Id";
+    public static final String _ID = "_id";
     public static final String TITLE = "Titre";
     public static final String ADDRESS = "Adresse";
     public static final String IMAGE = "Image";
@@ -22,10 +22,10 @@ public class DBHelper extends SQLiteOpenHelper {
     static final String DB_NAME = "LEBONCOIN.DB";
 
     // database version
-    static final int DB_VERSION = 1;
+    static final int DB_VERSION = 2;
 
     // Creating table query
-    private static final String CREATE_TABLE = "create table " + TABLE_NAME + "(" + _ID
+    private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "(" + _ID
             + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TITLE + " TEXT NOT NULL, " + ADDRESS + " TEXT, " + IMAGE + " TEXT);";
 
     public DBHelper(Context context) {

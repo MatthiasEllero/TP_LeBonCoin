@@ -27,8 +27,9 @@ public class DbAdAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        // TextView idTextView = (TextView) view.findViewById(...);
+        // TextView idTextView = (TextView) view.findViewById(...)
         TextView titleTextView = (TextView) view.findViewById(R.id.adName);
+        System.out.println(titleTextView);
         TextView addressTextView = (TextView) view.findViewById(R.id.adAddress);
         ImageView imageView = (ImageView) view.findViewById(R.id.adImage);
         String id = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper._ID));

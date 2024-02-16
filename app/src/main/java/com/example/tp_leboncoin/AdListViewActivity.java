@@ -32,7 +32,7 @@ public class AdListViewActivity extends AppCompatActivity {
         DBManager dbManager = DBManager.getDBManager(this);
         dbManager.open();
         Cursor cursor = dbManager.fetch();
-        CursorAdapter adapter = new DbAdAdapter(this, cursor, R.layout.activity_ad_list_view);
+        CursorAdapter adapter = new DbAdAdapter(this, cursor, R.layout.item_listview_ad);
         adapter.notifyDataSetChanged();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_list_view);
