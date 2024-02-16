@@ -58,6 +58,12 @@
                     android:onClick="callPhoneNumber" />
         </TableLayout>
 
+        <Button
+            android:id="@+id/themeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thèmes" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
