@@ -1,6 +1,7 @@
 package com.example.tp_leboncoin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +15,12 @@ import com.example.tp_leboncoin.sqlite.DBHelper;
 
 public class DbAdAdapter extends CursorAdapter {
     private final int item_layout;
+    private Context mContext;
 
     public DbAdAdapter(Context context, Cursor c, int layout) {
         super(context, c);
         item_layout = layout;
+        mContext = context;
     }
 
     @Override
@@ -27,22 +30,31 @@ public class DbAdAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        // TextView idTextView = (TextView) view.findViewById(...)
-        TextView titleTextView = (TextView) view.findViewById(R.id.adName);
-        TextView addressTextView = (TextView) view.findViewById(R.id.adAddress);
-        ImageView imageView = (ImageView) view.findViewById(R.id.adImage);
-        String id = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper._ID));
+        TextView titleTextView = view.findViewById(R.id.adName);
+        TextView addressTextView = view.findViewById(R.id.adAddress);
+        ImageView imageView = view.findViewById(R.id.adImage);
+        int id = cursor.getInt(cursor.getColumnIndexOrThrow(DBHelper._ID));
         String title = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.TITLE));
         String address = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.ADDRESS));
         String image = cursor.getString(cursor.getColumnIndexOrThrow(DBHelper.IMAGE));
-        // idTextView.setText(id);
+
         titleTextView.setText(title);
         addressTextView.setText(address);
 
-        // Utilisez Glide.with(context) pour charger l'image depuis l'URL
         Glide.with(context)
-                .load(image) // Charge l'image depuis l'URL spécifiée
-                .into(imageView); // Affiche l'image dans ImageView
+                .load(image)
+                .into(imageView);
+
+        // Ajouter un OnClickListener à la vue de la card
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Récupérer l'ID de l'annonce et lancer l'activité de vue détaillée
+                Intent intent = new Intent(mContext, AdViewActivity.class);
+                intent.putExtra("ad_id", id);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
 }

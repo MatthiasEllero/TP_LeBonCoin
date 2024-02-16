@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
     static final String DB_NAME = "LEBONCOIN.DB";
 
     // database version
-    static final int DB_VERSION = 2;
+    static final int DB_VERSION = 3;
 
     // Creating table query
     private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "(" + _ID
