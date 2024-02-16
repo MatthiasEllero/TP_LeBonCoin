@@ -77,6 +77,8 @@ class AdListManager {
         adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", R.drawable.wood_dark));
         adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice", R.drawable.ciment_b));
         adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", R.drawable.bric_blanc));
+        adList.add(new AdModel("Brick Rouge", "9 avenue de la nation, Montpellier", R.drawable.brique_rouge));
+        adList.add(new AdModel("Argile Rouge", "9 avenue de la liberté, Lille", R.drawable.argile_rouge));
     }
 }
 
