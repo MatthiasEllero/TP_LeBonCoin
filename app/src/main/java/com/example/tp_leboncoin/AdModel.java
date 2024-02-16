@@ -70,8 +70,7 @@ class AdListManager {
         adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", R.drawable.wood_dark)); // Assuming 0 as a placeholder for image ID
         adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice",R.drawable.ciment_b));
         adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", R.drawable.bric_blanc));
-        adList.add(new AdModel("Argile Rouge","19 rue du Trieu de Quesnoy,LEERS",R.drawable.argile_rouge));
-        adList.add(new AdModel("Bric Rouge","340, avenue Pierre de Coubertin, Carrières sous Poissy",R.drawable.brick_rouge));
+
     }
 }
 
