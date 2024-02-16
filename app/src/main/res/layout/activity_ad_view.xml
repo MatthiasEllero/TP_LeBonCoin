@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:foregroundTint="#FFFFFF"
     tools:context=".AdViewActivity">
 
     <LinearLayout
@@ -11,21 +14,37 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="61dp" />
+
+        <TextView
+            android:id="@+id/adTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="67dp" />
+
         <ImageView
             android:id="@+id/adImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/adTitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="43dp" />
 
         <TextView
             android:id="@+id/adAddressTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
