@@ -5,16 +5,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.tp_leboncoin.AdModel;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     // Table Name
     public static final String TABLE_NAME = "Annonces";
 
     // Table columns
-    public static final String _ID = ...;
-    public static final String TITLE = ...;
-    public static final String ADDRESS = ...;
-    public static final String IMAGE = ...;
+    public static final String _ID = "Id";
+    public static final String TITLE = "Titre";
+    public static final String ADDRESS = "Adresse";
+    public static final String IMAGE = "Image";
 
     // Database Information
     static final String DB_NAME = "LEBONCOIN.DB";
@@ -45,7 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     // Util if you want to add a clicklistener on specific ad in listview.
-    public DbAdModel getById(long id) {
+    public AdModel getById(long id) {
         SQLiteDatabase db=this.getWritableDatabase();
         String query="SELECT * FROM "+TABLE_NAME+" where "+ _ID + "=?";
         Cursor data = db.rawQuery(query,new String[] {String.valueOf(id)});
@@ -60,6 +62,6 @@ public class DBHelper extends SQLiteOpenHelper {
         String address = data.getString(data.getColumnIndexOrThrow(ADDRESS));
         String image = data.getString(data.getColumnIndexOrThrow(IMAGE));
 
-        return new DbAdModel(title, address, image);
+        return new AdModel(title, address, image);
     }
 }
