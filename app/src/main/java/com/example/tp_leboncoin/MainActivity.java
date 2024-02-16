@@ -47,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 callPhoneNumber();
             }
         });
+
+        Button themeButton = findViewById(R.id.themeButton);
+        themeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent pour démarrer ThemeSelectionActivity
+                Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Méthode pour composer le numéro de téléphone
