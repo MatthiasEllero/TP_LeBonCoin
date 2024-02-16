@@ -41,15 +41,15 @@ public class DBManager {
     // Add ads manually.
     public void init(){
         open();
-        insert(new DbAdModel("Wood", "Douai", "https://media.istockphoto.com/id/134253640/photo/construction-of-a-wooden-roof-frame-underway.jpg?s=612x612&w=0&k=20&c=e5gUkic9LGQWahIdHozOsEzHKy_HtsmvmtOHmYsejSU="));
-        insert(new DbAdModel("Steel", "Lille", "https://as2.ftcdn.net/v2/jpg/03/91/83/87/1000_F_391838708_4HFADW5beay2VVlnoual6Qi5fWeIaD9V.jpg"));
-        insert(new DbAdModel("Clay", "Douai", "https://constrofacilitator.com/wp-content/uploads/2020/02/clay-in-construction.jpg"));
-        insert(new DbAdModel("Metal", "Lyon", "https://www.meto-constructions.fr/wp-content/uploads/2018/12/IMG_6067.jpg"));
-        insert(new DbAdModel("Glass", "Valenciennes", "https://i0.wp.com/www.tipsnepal.com/wp-content/uploads/2020/09/simple-float-glass-1505049573-3306125.jpeg?resize=500%2C317&quality=100&strip=all&ssl=1"));
-        insert(new DbAdModel("Wood", "Orchies", "https://yieldpro.com/wp-content/uploads/2020/08/lumber1.jpg"));
+        insert(new AdModel("Wood", "Douai", "https://media.istockphoto.com/id/134253640/photo/construction-of-a-wooden-roof-frame-underway.jpg?s=612x612&w=0&k=20&c=e5gUkic9LGQWahIdHozOsEzHKy_HtsmvmtOHmYsejSU="));
+        insert(new AdModel("Steel", "Lille", "https://as2.ftcdn.net/v2/jpg/03/91/83/87/1000_F_391838708_4HFADW5beay2VVlnoual6Qi5fWeIaD9V.jpg"));
+        insert(new AdModel("Clay", "Douai", "https://constrofacilitator.com/wp-content/uploads/2020/02/clay-in-construction.jpg"));
+        insert(new AdModel("Metal", "Lyon", "https://www.meto-constructions.fr/wp-content/uploads/2018/12/IMG_6067.jpg"));
+        insert(new AdModel("Glass", "Valenciennes", "https://i0.wp.com/www.tipsnepal.com/wp-content/uploads/2020/09/simple-float-glass-1505049573-3306125.jpeg?resize=500%2C317&quality=100&strip=all&ssl=1"));
+        insert(new AdModel("Wood", "Orchies", "https://yieldpro.com/wp-content/uploads/2020/08/lumber1.jpg"));
     }
 
-    public void insert(DbAdModel ad) {
+    public void insert(AdModel ad) {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DBHelper.TITLE, ad.getTitle());
         contentValue.put(DBHelper.ADDRESS, ad.getAddress());
@@ -79,7 +79,7 @@ public class DBManager {
         database.delete(DBHelper.TABLE_NAME, DBHelper._ID + "=" + _id, null);
     }
 
-    public DbAdModel getById(int id){
+    public AdModel getById(int id){
         return dbHelper.getById(id);
     }
 

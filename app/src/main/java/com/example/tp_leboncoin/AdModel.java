@@ -7,10 +7,10 @@ public class AdModel {
     private int id; // ID unique pour chaque instance
     private String title;
     private String address;
-    private int image;
+    private String image;
 
     // Constructor
-    public AdModel(String title, String address, int image) {
+    public AdModel(String title, String address, String image) {
         this.id = nextId++; // Attribuer l'ID actuel puis incrémente pour le prochain
         this.title = title;
         this.address = address;
@@ -38,11 +38,11 @@ public class AdModel {
         this.address = address;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -76,11 +76,11 @@ class AdListManager {
     }
 
     private static void initializeSampleAds() {
-        adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", R.drawable.wood_dark));
-        adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice", R.drawable.ciment_b));
-        adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", R.drawable.bric_blanc));
-        adList.add(new AdModel("Brick Rouge", "9 avenue de la nation, Montpellier", R.drawable.brique_rouge));
-        adList.add(new AdModel("Argile Rouge", "9 avenue de la liberté, Lille", R.drawable.argile_rouge));
+        adList.add(new AdModel("Dark Wood", "123 rue de Paris, Paris", "drawable/argile_rouge.jpg"));
+        adList.add(new AdModel("Ciment Blanc", "45 allée des Fleurs, Nice", "drawable/bric_blanc.jpg"));
+        adList.add(new AdModel("Brick blanche", "9 avenue de la République, Lyon", "drawable/brique_rouge.jpg"));
+        adList.add(new AdModel("Brick Rouge", "9 avenue de la nation, Montpellier", "drawable/ciment_b.jpg"));
+        adList.add(new AdModel("Argile Rouge", "9 avenue de la liberté, Lille", "drawable/wood_dark.jpg"));
     }
 }
 
