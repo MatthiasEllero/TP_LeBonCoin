@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraAdAddActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/click_image_id"
+            android:layout_width="match_parent"
+            android:layout_height="327dp"
+            android:scaleType="centerCrop" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/textProduit2"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Insérez le nom de votre Produit" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/textAdress2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Insérez Votre Adresse" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/gallery_open_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ouvrir la galerie" />
+
+        <Button
+            android:id="@+id/camera_open_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ouvrir votre Appareil Photo" />
+
+        <Button
+            android:id="@+id/bt_send_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Envoyer l'annonce" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
