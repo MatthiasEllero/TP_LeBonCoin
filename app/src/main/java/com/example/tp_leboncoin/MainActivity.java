@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Charger la mise en page
-
         // Trouver les boutons après avoir chargé la mise en page
         Button b_add = findViewById(R.id.button_add);
         Button b_display = findViewById(R.id.button_display);
@@ -43,16 +42,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CameraAdAddActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button themeButton = findViewById(R.id.themeButton);
-        themeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Intent pour démarrer ThemeSelectionActivity
-                Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
                 startActivity(intent);
             }
         });
