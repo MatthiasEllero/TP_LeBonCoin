@@ -40,6 +40,14 @@
             android:hint="Insérez l'URL de votre image"
             android:inputType="textUri" />
 
+        <!-- Ajout du champ pour le numéro de téléphone -->
+        <EditText
+            android:id="@+id/textPhone"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:hint="Insérez votre numéro de téléphone"
+            android:inputType="phone" />
+
         <Button
             android:id="@+id/bsend"
             android:layout_width="match_parent"

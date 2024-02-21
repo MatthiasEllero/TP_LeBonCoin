@@ -16,17 +16,18 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String _ID = "_id";
     public static final String TITLE = "Titre";
     public static final String ADDRESS = "Adresse";
+    public static final String PHONE = "Telephone"; // New field for phone
     public static final String IMAGE = "Image";
 
     // Database Information
     static final String DB_NAME = "LEBONCOIN.DB";
 
     // database version
-    static final int DB_VERSION = 3;
+    static final int DB_VERSION = 4; // Incremented the version due to schema change
 
     // Creating table query
     private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + "(" + _ID
-            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TITLE + " TEXT NOT NULL, " + ADDRESS + " TEXT, " + IMAGE + " TEXT);";
+            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TITLE + " TEXT NOT NULL, " + ADDRESS + " TEXT, " + PHONE + " TEXT, " + IMAGE + " TEXT);";
 
     public DBHelper(Context context) {
         super(context,
@@ -60,8 +61,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String title = data.getString(data.getColumnIndexOrThrow(TITLE));
         String address = data.getString(data.getColumnIndexOrThrow(ADDRESS));
+        String phone = data.getString(data.getColumnIndexOrThrow(PHONE)); // Fetch phone number
         String image = data.getString(data.getColumnIndexOrThrow(IMAGE));
 
-        return new AdModel(title, address, image);
+        return new AdModel(title, address, phone, image); // Update to include phone
     }
 }

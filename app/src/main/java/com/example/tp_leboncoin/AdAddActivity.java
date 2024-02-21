@@ -2,12 +2,14 @@ package com.example.tp_leboncoin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.content.Intent;
+
 import com.example.tp_leboncoin.sqlite.DBManager;
+
 public class AdAddActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,8 @@ public class AdAddActivity extends AppCompatActivity {
 
         final EditText editTextProductName = findViewById(R.id.textProduit);
         final EditText editTextAddress = findViewById(R.id.textAdress);
-        final EditText editTextImageUrl = findViewById(R.id.textImageUrl); // Assurez-vous que cet EditText est présent dans votre layout
+        final EditText editTextImageUrl = findViewById(R.id.textImageUrl);
+        final EditText editTextPhone = findViewById(R.id.textPhone); // Ajout de la référence à l'EditText du téléphone
         Button bsend = findViewById(R.id.bsend);
 
         bsend.setOnClickListener(new View.OnClickListener() {
@@ -26,14 +29,15 @@ public class AdAddActivity extends AppCompatActivity {
                 // Récupération des valeurs entrées par l'utilisateur
                 String productName = editTextProductName.getText().toString().trim();
                 String address = editTextAddress.getText().toString().trim();
-                String imageUrl = editTextImageUrl.getText().toString().trim(); // Récupération de l'URL de l'image
+                String imageUrl = editTextImageUrl.getText().toString().trim();
+                String phone = editTextPhone.getText().toString().trim(); // Récupération du numéro de téléphone
 
                 // Initialisation de DBManager pour l'insertion des données
                 DBManager dbManager = DBManager.getDBManager(AdAddActivity.this);
                 dbManager.open();
 
-                // Création d'un nouvel objet AdModel et insertion dans la base de données
-                AdModel newAd = new AdModel(productName, address, imageUrl);
+                // Création d'un nouvel objet AdModel avec le numéro de téléphone et insertion dans la base de données
+                AdModel newAd = new AdModel(productName, address, phone, imageUrl);
                 dbManager.insert(newAd);
 
                 dbManager.close(); // Fermeture de la base de données
@@ -46,5 +50,3 @@ public class AdAddActivity extends AppCompatActivity {
         });
     }
 }
-
-
