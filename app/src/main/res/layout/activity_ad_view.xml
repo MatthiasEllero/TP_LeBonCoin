@@ -57,5 +57,14 @@
             android:textAlignment="center"
             android:textSize="20sp" />
 
+        <!-- Bouton pour appeler le numéro de téléphone -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="callPhoneNumber"
+            android:text="Appeler"
+            android:layout_marginTop="16dp"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
