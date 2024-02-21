@@ -58,6 +58,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <EditText
+            android:id="@+id/textPhone2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:ems="10"
+            android:hint="Insérez Votre Numéro de Téléphone"
+            android:inputType="phone" /> <!-- Champ téléphone -->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/gallery_open_id"
             android:layout_width="match_parent"

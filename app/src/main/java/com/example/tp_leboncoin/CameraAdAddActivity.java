@@ -109,8 +109,9 @@ public class CameraAdAddActivity extends AppCompatActivity {
                 ImageView image = findViewById(R.id.click_image_id);
                 EditText title = findViewById(R.id.textProduit2);
                 EditText address = findViewById(R.id.textAdress2);
+                EditText phone = findViewById(R.id.textPhone2); // Ajout du champ téléphone
 
-                AdModel ad = new AdModel(title.getText().toString(), address.getText().toString(), filePath);
+                AdModel ad = new AdModel(title.getText().toString(), address.getText().toString(), phone.getText().toString(), filePath); // Passer le numéro de téléphone
                 dbManager.insert(ad);
 
                 Intent intent = new Intent(CameraAdAddActivity.this, AdListViewActivity.class);
