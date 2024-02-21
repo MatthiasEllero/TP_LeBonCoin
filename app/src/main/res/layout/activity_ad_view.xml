@@ -46,5 +46,16 @@
             android:text="TextView"
             android:textAlignment="center"
             android:textSize="24sp" />
+
+        <!-- Ajout du champ téléphone -->
+        <TextView
+            android:id="@+id/adPhoneTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Numéro de téléphone :"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

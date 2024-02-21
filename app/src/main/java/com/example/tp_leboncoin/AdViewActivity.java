@@ -35,6 +35,7 @@ public class AdViewActivity extends AppCompatActivity {
                 ImageView imageView = findViewById(R.id.adImageView);
                 TextView titleTextView = findViewById(R.id.adTitleTextView);
                 TextView addressTextView = findViewById(R.id.adAddressTextView);
+                TextView phoneTextView = findViewById(R.id.adPhoneTextView); // Ajout du champ téléphone
 
                 Glide.with(this)
                         .load(adModel.getImage())
@@ -42,6 +43,7 @@ public class AdViewActivity extends AppCompatActivity {
 
                 titleTextView.setText(adModel.getTitle());
                 addressTextView.setText(adModel.getAddress());
+                phoneTextView.setText(adModel.getPhone()); // Afficher le numéro de téléphone
             }
         }
     }
