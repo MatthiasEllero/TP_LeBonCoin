@@ -14,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Charger la mise en page
-
         // Trouver les boutons après avoir chargé la mise en page
         Button b_add = findViewById(R.id.button_add);
         Button b_display = findViewById(R.id.button_display);
+        Button b_camera = findViewById(R.id.button_camera);
 
         // Ajouter un écouteur de clic pour le bouton b_add
         b_add.setOnClickListener(new View.OnClickListener() {
@@ -38,13 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button themeButton = findViewById(R.id.themeButton);
-        themeButton.setOnClickListener(new View.OnClickListener() {
+        b_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent pour démarrer ThemeSelectionActivity
-                Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
+                Intent intent = new Intent(MainActivity.this, CameraAdAddActivity.class);
                 startActivity(intent);
             }
         });
