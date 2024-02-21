@@ -39,11 +39,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Ajouter un écouteur de clic pour le bouton d'appel
+        Button b_call = findViewById(R.id.btnCall);
+        b_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callPhoneNumber();
+            }
+        });
 
+        Button themeButton = findViewById(R.id.themeButton);
+        themeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent pour démarrer ThemeSelectionActivity
+                Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Méthode pour composer le numéro de téléphone
-    public void callPhoneNumber(View view) {
+    private void callPhoneNumber() {
         // Récupérer le numéro de téléphone à partir d'une source quelconque (par exemple une variable ou une ressource)
         String phoneNumber = "0769178770";
 
@@ -60,25 +77,4 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Aucune application d'appel n'est disponible.", Toast.LENGTH_SHORT).show();
         }
     }
-
-    public void sendEmail(View view) {
-        // Adresse e-mail de la personne à qui vous voulez envoyer un e-mail
-        String recipientEmail = "example@example.com";
-
-        // Créer une intention pour envoyer un e-mail
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:" + recipientEmail));
-
-        // Vérifie si une application e-mail est disponible sur l'appareil
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            // Démarrer l'intention
-            startActivity(intent);
-        } else {
-            // Gérer le cas où aucune application e-mail n'est disponible
-            Toast.makeText(this, "Aucune application e-mail n'est disponible.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-
-
 }

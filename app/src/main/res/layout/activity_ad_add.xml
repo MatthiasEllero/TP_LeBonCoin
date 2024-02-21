@@ -6,4 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".AdAddActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            app:srcCompat="@drawable/newannonce" />
+
+        <EditText
+            android:id="@+id/textProduit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Insérez le nom de votre produit"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/textAdress"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="Insérez votre Adresse"
+            android:inputType="text" />
+
+        <!-- Ajout du champ pour l'URL de l'image -->
+        <EditText
+            android:id="@+id/textImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:hint="Insérez l'URL de votre image"
+            android:inputType="textUri" />
+
+        <Button
+            android:id="@+id/bsend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
