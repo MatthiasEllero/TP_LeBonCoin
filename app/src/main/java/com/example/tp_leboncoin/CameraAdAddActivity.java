@@ -74,6 +74,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
                 Intent data = result.getData();
                 Uri image = (Uri) result.getData().getData();
                 click_image_id.setImageURI(image);
+                filePath = image.toString();
             }
         }
     });

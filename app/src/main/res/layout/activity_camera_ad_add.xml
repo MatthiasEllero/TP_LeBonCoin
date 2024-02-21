@@ -31,8 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Insérez le nom de votre Produit" />
+            android:hint="Insérez le nom de votre Produit"
+            android:inputType="text" />
 
         <Space
             android:layout_width="match_parent"
@@ -47,8 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Insérez Votre Adresse" />
+            android:hint="Insérez Votre Adresse"
+            android:inputType="text" />
 
         <Space
             android:layout_width="match_parent"
