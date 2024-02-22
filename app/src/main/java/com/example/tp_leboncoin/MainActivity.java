@@ -12,9 +12,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Appliquer le thème sélectionné avant d'inflater la mise en page de l'activité principale
+
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Charger la mise en page
-        // Trouver les boutons après avoir chargé la mise en page
+        setContentView(R.layout.activity_main);
+
         Button b_add = findViewById(R.id.button_add);
         Button b_display = findViewById(R.id.button_display);
         Button b_camera = findViewById(R.id.button_camera);
@@ -38,10 +43,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Ajouter un écouteur de clic pour le bouton b_camera
         b_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CameraAdAddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button themeButton = findViewById(R.id.themeButton);
+
+        // Ajouter un écouteur de clic pour le bouton de thème
+        themeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Démarrer l'activité de sélection de thème
+                Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
                 startActivity(intent);
             }
         });
@@ -66,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Méthode pour envoyer un e-mail
     public void sendEmail(View view) {
         // Adresse e-mail de la personne à qui vous voulez envoyer un e-mail
         String recipientEmail = "example@example.com";
@@ -83,5 +103,4 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Aucune application e-mail n'est disponible.", Toast.LENGTH_SHORT).show();
         }
     }
-
 }

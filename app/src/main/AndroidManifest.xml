@@ -34,6 +34,12 @@
             android:name=".AdListViewActivity"
             android:exported="false" />
         <activity
+            android:name=".ThemeSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThemeSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".CameraAdAddActivity"
             android:exported="false" />
         <activity
