@@ -15,11 +15,17 @@ public class ThemeSelectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
+
         setContentView(R.layout.activity_theme_selection);
 
         Button btnTheme1 = findViewById(R.id.btnTheme1);
         Button btnTheme2 = findViewById(R.id.btnTheme2);
         Button btnTheme3 = findViewById(R.id.btnTheme3);
+        Button btnTheme4 = findViewById(R.id.btnTheme4);
+        Button btnTheme5 = findViewById(R.id.btnTheme5);
 
         btnTheme1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +51,21 @@ public class ThemeSelectionActivity extends AppCompatActivity {
             }
         });
 
-        // Ajoutez des listeners pour d'autres boutons de thème si nécessaire
+        btnTheme4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SELECTED_THEME = "AppThemePinkPurple";
+                applyThemeAndRestart();
+            }
+        });
+
+        btnTheme5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SELECTED_THEME = "Base.Theme.TP_LeBonCoin";
+                applyThemeAndRestart();
+            }
+        });
     }
 
     private void applyThemeAndRestart() {

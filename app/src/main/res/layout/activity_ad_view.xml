@@ -4,67 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
-    android:foregroundTint="#FFFFFF"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground"
     tools:context=".AdViewActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/adTitleTextView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:text="Titre de l'annonce"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="61dp" />
+    <ImageView
+        android:id="@+id/adImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/adTitleTextView" />
 
-        <TextView
-            android:id="@+id/adTitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="34sp" />
+    <TextView
+        android:id="@+id/adAddressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Adresse de l'annonce"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adImageView" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="67dp" />
+    <TextView
+        android:id="@+id/adPhoneLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numéro de téléphone :"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/adAddressTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
 
-        <ImageView
-            android:id="@+id/adImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/adPhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXXXXXXXXX"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/adAddressTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="43dp" />
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appeler"
+        android:onClick="callPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@id/adPhoneTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
 
-        <TextView
-            android:id="@+id/adAddressTextView"
-            android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <!-- Ajout du champ téléphone -->
-        <TextView
-            android:id="@+id/adPhoneTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Numéro de téléphone :"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-
-        <!-- Bouton pour appeler le numéro de téléphone -->
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="callPhoneNumber"
-            android:text="Appeler"
-            android:layout_marginTop="16dp"/>
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

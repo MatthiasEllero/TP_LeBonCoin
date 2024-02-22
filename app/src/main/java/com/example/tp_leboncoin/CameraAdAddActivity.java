@@ -82,6 +82,10 @@ public class CameraAdAddActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
+
         setContentView(R.layout.activity_camera_ad_add); // Complete with your activity's id
 
         camera_open_id = findViewById(R.id.camera_open_id);

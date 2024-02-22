@@ -15,6 +15,10 @@ public class AdAddActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
+
         setContentView(R.layout.activity_ad_add);
 
         final EditText editTextProductName = findViewById(R.id.textProduit);

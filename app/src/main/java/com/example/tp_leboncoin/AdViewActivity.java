@@ -20,6 +20,10 @@ public class AdViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
+
         setContentView(R.layout.activity_ad_view);
 
         // Récupérer l'ID de l'annonce depuis l'intent

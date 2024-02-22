@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,26 +5,47 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
+    android:background="?android:attr/windowBackground"
     tools:context=".ThemeSelectionActivity">
 
     <Button
         android:id="@+id/btnTheme1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thème 1" />
+        android:text="Jaune/Orange"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnTheme2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thème 2" />
+        android:text="Bleu"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnTheme3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thème 3" />
+        android:text="Vert"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Ajoutez des boutons supplémentaires pour d'autres thèmes si nécessaire -->
+    <Button
+        android:id="@+id/btnTheme4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rose/Violet"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnTheme5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noir/Blanc"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
 
 </LinearLayout>

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?android:attr/windowBackground"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#FFFFFF"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -19,67 +18,56 @@
             android:layout_width="match_parent"
             android:layout_height="152dp" />
 
-        <TableLayout
+        <Button
+            android:id="@+id/button_display"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorSecondary"
+            android:text="Display List" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorSecondary"
+            android:text="Add Material" />
 
-                <Button
-                    android:id="@+id/button_display"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#2196F3"
-                    android:text="Display List" />
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorSecondary"
+            android:text="Launch Camera" />
 
-                <Button
-                    android:id="@+id/button_add"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#2196F3"
-                    android:text="Add Material" />
-                <Button
-                    android:id="@+id/button_camera"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#2196F3"
-                    android:text="Lunch camera" />
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Appeler"
+            android:background="?attr/colorAccent"
+            android:textColor="@android:color/white"/>
 
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-                <Button
-                    android:id="@+id/btnCall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Appeler"
-                    android:onClick="callPhoneNumber" />
-
-                <Button
-                    android:id="@+id/btnEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Envoyer un e-mail"
-                    android:onClick="sendEmail" />
-        </TableLayout>
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Envoyer un e-mail"
+            android:background="?attr/colorAccent"
+            android:textColor="@android:color/white"/>
 
         <Button
             android:id="@+id/themeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thèmes" />
+            android:layout_marginTop="8dp"
+            android:text="Thèmes"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 

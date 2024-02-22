@@ -1,39 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.TP_LeBonCoin" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
         <item name="colorPrimary">#757575</item> <!-- Gris moyen pour la couleur primaire -->
         <item name="colorPrimaryDark">#424242</item> <!-- Gris foncé pour la couleur primaire sombre -->
         <item name="colorAccent">#BDBDBD</item> <!-- Gris clair pour l'accentuation -->
-        <!-- Ajoutez d'autres attributs personnalisés selon vos besoins -->
+        <item name="cardBackgroundColor">#F5F5F5</item> <!-- Couleur de fond des cartes -->
+        <item name="android:windowBackground">#CDFFFFFF</item>
     </style>
 
 
     <style name="AppThemeYellowOrange" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#FFEB3B</item>
         <item name="colorPrimaryDark">#FFC107</item>
-        <item name="colorAccent">#FF5722</item>
+        <item name="colorAccent">#FFAE22</item>
+        <item name="android:windowBackground">#FFFBDA</item>
+        <item name="cardBackgroundColor">#A89701</item>
     </style>
 
     <style name="AppThemeBlueLightBlue" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryDark">#1976D2</item>
         <item name="colorAccent">#03A9F4</item>
-        <!-- Ajoutez d'autres attributs personnalisés selon vos besoins -->
+        <item name="cardBackgroundColor">#BBDEFB</item>
+        <item name="android:windowBackground">#DAFAF5</item>
     </style>
 
     <style name="AppThemeGreenDarkGreen" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#4CAF50</item>
         <item name="colorPrimaryDark">#388E3C</item>
         <item name="colorAccent">#8BC34A</item>
-        <!-- Ajoutez d'autres attributs personnalisés selon vos besoins -->
+        <item name="cardBackgroundColor">#C8E6C9</item>
+        <item name="android:windowBackground">#DBFFE0</item>
     </style>
 
     <style name="AppThemePinkPurple" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#E91E63</item>
         <item name="colorPrimaryDark">#C2185B</item>
         <item name="colorAccent">#9C27B0</item>
-        <!-- Ajoutez d'autres attributs personnalisés selon vos besoins -->
+        <item name="cardBackgroundColor">#F8BBD0</item>
+        <item name="android:windowBackground">#FBDFF0</item>
     </style>
 
     <style name="Theme.TP_LeBonCoin" parent="Base.Theme.TP_LeBonCoin" />

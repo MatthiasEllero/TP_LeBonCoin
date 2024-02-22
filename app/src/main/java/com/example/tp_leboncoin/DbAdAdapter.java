@@ -20,6 +20,7 @@ public class DbAdAdapter extends CursorAdapter {
     public DbAdAdapter(Context context, Cursor c, int layout) {
         super(context, c);
         item_layout = layout;
+
         mContext = context;
     }
 
@@ -49,6 +50,7 @@ public class DbAdAdapter extends CursorAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // Récupérer l'ID de l'annonce et lancer l'activité de vue détaillée
                 Intent intent = new Intent(mContext, AdViewActivity.class);
                 intent.putExtra("ad_id", id);

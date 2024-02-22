@@ -27,6 +27,8 @@ public class AdListViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
+        setTheme(selectedThemeId);
         DBManager dbManager = DBManager.getDBManager(this);
         dbManager.open();
         Cursor cursor = dbManager.fetch();
