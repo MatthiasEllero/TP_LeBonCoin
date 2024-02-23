@@ -36,7 +36,7 @@
     <style name="AppThemePinkPurple" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">#E91E63</item>
         <item name="colorPrimaryDark">#C2185B</item>
-        <item name="colorAccent">#9C27B0</item>
+        <item name="colorAccent">#FA3D53</item>
         <item name="cardBackgroundColor">#F8BBD0</item>
         <item name="android:windowBackground">#FBDFF0</item>
     </style>
