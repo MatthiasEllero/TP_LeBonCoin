@@ -66,41 +66,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Méthode pour composer le numéro de téléphone
-    public void callPhoneNumber(View view) {
-        // Récupérer le numéro de téléphone à partir d'une source quelconque (par exemple une variable ou une ressource)
-        String phoneNumber = "0769178770";
-
-        // Créer une intention d'appel
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:" + phoneNumber));
-
-        // Vérifier si l'application d'appel est disponible sur l'appareil
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            // Démarrer l'intention
-            startActivity(intent);
-        } else {
-            // Gérer le cas où aucune application d'appel n'est disponible
-            Toast.makeText(this, "Aucune application d'appel n'est disponible.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    // Méthode pour envoyer un e-mail
-    public void sendEmail(View view) {
-        // Adresse e-mail de la personne à qui vous voulez envoyer un e-mail
-        String recipientEmail = "example@example.com";
-
-        // Créer une intention pour envoyer un e-mail
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:" + recipientEmail));
-
-        // Vérifie si une application e-mail est disponible sur l'appareil
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            // Démarrer l'intention
-            startActivity(intent);
-        } else {
-            // Gérer le cas où aucune application e-mail n'est disponible
-            Toast.makeText(this, "Aucune application e-mail n'est disponible.", Toast.LENGTH_SHORT).show();
-        }
-    }
 }
