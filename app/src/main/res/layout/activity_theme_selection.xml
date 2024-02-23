@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Jaune/Orange"
         android:layout_marginBottom="8dp"
+        android:textColor="#FFFFFF"
         android:background="@drawable/rounded_button" />
 
     <Button
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Bleu"
         android:layout_marginBottom="8dp"
+        android:textColor="#FFFFFF"
         android:background="@drawable/rounded_button" />
 
     <Button
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:text="Vert"
         android:layout_marginBottom="8dp"
+        android:textColor="#FFFFFF"
         android:background="@drawable/rounded_button" />
 
     <Button
@@ -38,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Rose/Violet"
         android:layout_marginBottom="8dp"
+        android:textColor="#FFFFFF"
         android:background="@drawable/rounded_button" />
 
     <Button
@@ -45,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Noir/Blanc"
+        android:textColor="#FFFFFF"
         android:background="@drawable/rounded_button"
         android:layout_marginBottom="8dp" />
 
