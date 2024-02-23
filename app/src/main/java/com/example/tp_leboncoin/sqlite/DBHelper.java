@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String _ID = "_id";
     public static final String TITLE = "Titre";
     public static final String ADDRESS = "Adresse";
-    public static final String PHONE = "Telephone"; // New field for phone
+    public static final String PHONE = "Telephone";
     public static final String IMAGE = "Image";
 
     // Database Information
@@ -61,9 +61,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String title = data.getString(data.getColumnIndexOrThrow(TITLE));
         String address = data.getString(data.getColumnIndexOrThrow(ADDRESS));
-        String phone = data.getString(data.getColumnIndexOrThrow(PHONE)); // Fetch phone number
+        String phone = data.getString(data.getColumnIndexOrThrow(PHONE));
         String image = data.getString(data.getColumnIndexOrThrow(IMAGE));
 
-        return new AdModel(title, address, phone, image); // Update to include phone
+        return new AdModel(title, address, phone, image);
     }
 }

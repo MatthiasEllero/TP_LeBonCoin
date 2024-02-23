@@ -8,7 +8,7 @@ public class AdModel {
 
     private String title;
     private String address;
-    private String phone; // Nouveau champ téléphone
+    private String phone;
     private String image;
 
     // Constructor

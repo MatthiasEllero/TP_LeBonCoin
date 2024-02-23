@@ -64,7 +64,7 @@ public class DBManager {
         ContentValues contentValue = new ContentValues();
         contentValue.put(DBHelper.TITLE, ad.getTitle());
         contentValue.put(DBHelper.ADDRESS, ad.getAddress());
-        contentValue.put(DBHelper.PHONE, ad.getPhone()); // Insert phone number
+        contentValue.put(DBHelper.PHONE, ad.getPhone());
         contentValue.put(DBHelper.IMAGE, ad.getImage());
         database.insert(DBHelper.TABLE_NAME, null, contentValue);
     }
@@ -82,7 +82,7 @@ public class DBManager {
         ContentValues contentValues = new ContentValues();
         contentValues.put(DBHelper.TITLE, ad.getTitle());
         contentValues.put(DBHelper.ADDRESS, ad.getAddress());
-        contentValues.put(DBHelper.PHONE, ad.getPhone()); // Update phone number
+        contentValues.put(DBHelper.PHONE, ad.getPhone());
         contentValues.put(DBHelper.IMAGE, ad.getImage());
         int i = database.update(DBHelper.TABLE_NAME, contentValues, DBHelper._ID + " = " + _id, null);
         return i;

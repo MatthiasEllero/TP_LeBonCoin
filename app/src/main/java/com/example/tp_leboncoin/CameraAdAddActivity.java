@@ -86,7 +86,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
         int selectedThemeId = getResources().getIdentifier(ThemeSelectionActivity.SELECTED_THEME, "style", getPackageName());
         setTheme(selectedThemeId);
 
-        setContentView(R.layout.activity_camera_ad_add); // Complete with your activity's id
+        setContentView(R.layout.activity_camera_ad_add);
 
         camera_open_id = findViewById(R.id.camera_open_id);
         gallery_open_id = findViewById(R.id.gallery_open_id);
@@ -95,7 +95,6 @@ public class CameraAdAddActivity extends AppCompatActivity {
         DBManager dbManager = DBManager.getDBManager(this);
         dbManager.open();
 
-        // Camera_open button is for open the camera and add the setOnClickListener in this button
         camera_open_id.setOnClickListener(v -> {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             cameraActivityResultLauncher.launch(intent);
@@ -113,7 +112,7 @@ public class CameraAdAddActivity extends AppCompatActivity {
                 ImageView image = findViewById(R.id.click_image_id);
                 EditText title = findViewById(R.id.textProduit2);
                 EditText address = findViewById(R.id.textAdress2);
-                EditText phone = findViewById(R.id.textPhone2); // Ajout du champ téléphone
+                EditText phone = findViewById(R.id.textPhone2);
 
                 AdModel ad = new AdModel(title.getText().toString(), address.getText().toString(), phone.getText().toString(), filePath); // Passer le numéro de téléphone
                 dbManager.insert(ad);

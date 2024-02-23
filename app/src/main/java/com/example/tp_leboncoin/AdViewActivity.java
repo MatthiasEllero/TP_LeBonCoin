@@ -60,20 +60,16 @@ public class AdViewActivity extends AppCompatActivity {
     // Méthode pour composer le numéro de téléphone lorsque l'utilisateur clique sur le bouton d'appel
     public void callPhoneNumber(View view) {
         if (phoneNumber != null && !phoneNumber.isEmpty()) {
-            // Créer une intention d'appel
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + phoneNumber));
 
             // Vérifier si l'application d'appel est disponible sur l'appareil
             if (intent.resolveActivity(getPackageManager()) != null) {
-                // Démarrer l'intention
                 startActivity(intent);
             } else {
-                // Gérer le cas où aucune application d'appel n'est disponible
                 Toast.makeText(this, "Aucune application d'appel n'est disponible.", Toast.LENGTH_SHORT).show();
             }
         } else {
-            // Gérer le cas où le numéro de téléphone est vide ou null
             Toast.makeText(this, "Numéro de téléphone non disponible.", Toast.LENGTH_SHORT).show();
         }
     }

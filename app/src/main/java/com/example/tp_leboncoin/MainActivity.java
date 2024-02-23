@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Button b_display = findViewById(R.id.button_display);
         Button b_camera = findViewById(R.id.button_camera);
 
-        // Ajouter un écouteur de clic pour le bouton b_add
+        // Ecouteur de clic pour le bouton b_add
         b_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Ajouter un écouteur de clic pour le bouton b_display
+        // Ecouteur de clic pour le bouton b_display
         b_display.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Ajouter un écouteur de clic pour le bouton b_camera
+        // Ecouteur de clic pour le bouton b_camera
         b_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,11 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button themeButton = findViewById(R.id.themeButton);
 
-        // Ajouter un écouteur de clic pour le bouton de thème
+        // Ecouteur de clic pour le bouton de thème
         themeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Démarrer l'activité de sélection de thème
                 Intent intent = new Intent(MainActivity.this, ThemeSelectionActivity.class);
                 startActivity(intent);
             }

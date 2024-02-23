@@ -24,7 +24,7 @@ public class AdAddActivity extends AppCompatActivity {
         final EditText editTextProductName = findViewById(R.id.textProduit);
         final EditText editTextAddress = findViewById(R.id.textAdress);
         final EditText editTextImageUrl = findViewById(R.id.textImageUrl);
-        final EditText editTextPhone = findViewById(R.id.textPhone); // Ajout de la référence à l'EditText du téléphone
+        final EditText editTextPhone = findViewById(R.id.textPhone);
         Button bsend = findViewById(R.id.bsend);
 
         bsend.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +40,7 @@ public class AdAddActivity extends AppCompatActivity {
                 DBManager dbManager = DBManager.getDBManager(AdAddActivity.this);
                 dbManager.open();
 
-                // Création d'un nouvel objet AdModel avec le numéro de téléphone et insertion dans la base de données
+                // Création d'un nouvel objet AdModel et insertion dans la base de données
                 AdModel newAd = new AdModel(productName, address, phone, imageUrl);
                 dbManager.insert(newAd);
 
