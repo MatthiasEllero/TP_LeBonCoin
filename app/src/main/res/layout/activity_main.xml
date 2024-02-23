@@ -23,27 +23,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="?attr/colorPrimary"
             android:text="Liste Annonces"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/button_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="?attr/colorPrimary"
             android:text="Ajouter Annonce"
-            android:textColor="#FFFFFFFF" />
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/button_camera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="?attr/colorPrimary"
             android:text="Ajouter Annonce via caméra"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button" />
 
         <Button
             android:id="@+id/themeButton"
@@ -51,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Thèmes"
-            android:background="?attr/colorPrimary"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button" />
 
     </LinearLayout>
 

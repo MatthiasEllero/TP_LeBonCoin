@@ -5,16 +5,16 @@
         <item name="colorPrimaryDark">#424242</item> <!-- Gris foncé pour la couleur primaire sombre -->
         <item name="colorAccent">#BDBDBD</item> <!-- Gris clair pour l'accentuation -->
         <item name="cardBackgroundColor">#F5F5F5</item> <!-- Couleur de fond des cartes -->
-        <item name="android:windowBackground">#CDFFFFFF</item>
+        <item name="android:windowBackground">#32FFFFFF</item>
     </style>
 
 
     <style name="AppThemeYellowOrange" parent="Theme.AppCompat.Light">
-        <item name="colorPrimary">#FFEB3B</item>
+        <item name="colorPrimary">#FFBE3B</item>
         <item name="colorPrimaryDark">#FFC107</item>
-        <item name="colorAccent">#FFAE22</item>
+        <item name="colorAccent">#FFC86A</item>
         <item name="android:windowBackground">#FFFBDA</item>
-        <item name="cardBackgroundColor">#A89701</item>
+        <item name="cardBackgroundColor">#FFFBDA</item>
     </style>
 
     <style name="AppThemeBlueLightBlue" parent="Theme.AppCompat.Light">

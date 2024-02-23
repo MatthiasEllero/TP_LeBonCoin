@@ -10,42 +10,42 @@
 
     <Button
         android:id="@+id/btnTheme1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jaune/Orange"
-        android:background="?attr/colorPrimary"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btnTheme2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bleu"
-        android:background="?attr/colorPrimary"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btnTheme3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Vert"
-        android:background="?attr/colorPrimary"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btnTheme4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rose/Violet"
-        android:background="?attr/colorPrimary"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button" />
 
     <Button
         android:id="@+id/btnTheme5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Noir/Blanc"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/rounded_button"
         android:layout_marginBottom="8dp" />
 
 </LinearLayout>

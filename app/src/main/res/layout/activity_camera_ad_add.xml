@@ -32,7 +32,8 @@
             android:layout_height="72dp"
             android:ems="10"
             android:hint="Insérez le nom de votre Produit"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="#00000000" />
 
         <Space
             android:layout_width="match_parent"
