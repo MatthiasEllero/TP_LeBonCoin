@@ -36,7 +36,8 @@
                 android:layout_marginTop="16dp"
                 android:text="Nom de l'annonce"
                 android:textColor="?attr/colorPrimary"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/adAddress"
